@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUCÍA ISABEL PAGÁN // RAW</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importamos fuentes brutalistas: Space Grotesk (Titulares) y Space Mono (Textos técnicos) -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #E5E5E5; /* Gris crudo */
+            --accent: #FF0000; /* Rojo tóxico/alerta */
+        }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--bg-color);
+            color: #000;
+            /* Cursor estilo francotirador para más agresividad */
+            cursor: crosshair; 
+            text-transform: uppercase;
+        }
+
+        .font-mono-raw {
+            font-family: 'Space Mono', monospace;
+        }
+
+        /* Bordes estructurales gruesos */
+        .b-raw { border: 3px solid #000; }
+        .b-b-raw { border-bottom: 3px solid #000; }
+        .b-t-raw { border-top: 3px solid #000; }
+        .b-r-raw { border-right: 3px solid #000; }
+        .b-l-raw { border-left: 3px solid #000; }
+
+        /* Marquesina (Texto rodante) */
+        .marquee {
+            width: 100vw;
+            overflow: hidden;
+            white-space: nowrap;
+            background-color: #000;
+            color: var(--bg-color);
+            padding: 10px 0;
+            display: flex;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Efecto Invertido al pasar el ratón por los proyectos */
+        .project-row {
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .project-row:hover {
+            background-color: #000;
+            color: var(--bg-color);
+        }
+        .project-row:hover .pill {
+            background-color: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+        .project-row:hover img, .project-row:hover video {
+            filter: grayscale(100%) contrast(1.2);
+            opacity: 0.8;
+        }
+
+        /* Imágenes de proyecto crudas */
+        .raw-media {
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+        .project-row:hover .raw-media {
+            filter: grayscale(0%);
+        }
+
+        /* Utilidades para alternar lenguajes en elementos complejos */
+        .lang-en { display: none; }
+        html[lang="en"] .lang-es { display: none; }
+        html[lang="en"] .lang-en { display: block; }
+    </style>
+</head>
+<body class="antialiased selection:bg-black selection:text-white overflow-x-hidden">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="w-full flex justify-between items-center p-4 b-b-raw bg-[#E5E5E5] sticky top-0 z-50">
+        <div class="font-black text-2xl tracking-tighter leading-none">
+            LUCÍA<br>ISABEL
+        </div>
+        <div class="hidden md:flex gap-8 font-mono-raw text-xs font-bold">
+            <a href="#work" class="hover:text-[var(--accent)] hover:line-through">/// WORK</a>
+            <a href="#about" class="hover:text-[var(--accent)] hover:line-through">/// ABOUT</a>
+            <a href="mailto:luciaisabelpagan@gmail.com" class="hover:text-[var(--accent)] hover:line-through">/// CONTACT</a>
+        </div>
+        
+        <!-- CONTROLES DE IDIOMA Y SISTEMA -->
+        <div class="flex items-center gap-2">
+            <button id="lang-toggle" onclick="toggleLanguage()" class="font-mono-raw text-xs bg-black text-[var(--accent)] px-3 py-1 font-bold b-raw hover:bg-[var(--accent)] hover:text-black transition-colors">
+                [ LANG: ES ]
+            </button>
+            <div class="font-mono-raw text-xs bg-black text-white px-3 py-1 font-bold b-raw hidden sm:block">
+                MADRID [ES]
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO (TÍTULO GIGANTE) -->
+    <header class="min-h-[80vh] flex flex-col justify-end p-4 b-b-raw relative overflow-hidden">
+        <!-- Decoración tipo código de barras -->
+        <div class="absolute top-4 right-4 font-mono-raw text-xs text-gray-400 text-right">
+            ID: LP-2026<br>
+            SYS: ONLINE<br>
+            |||| ||||| || | |||| ||
+        </div>
+
+        <div class="relative z-10 w-full">
+            <h1 class="text-[16vw] md:text-[12vw] font-black leading-[0.8] tracking-tighter" data-es="ARQUITECTA" data-en="ARCHITECT">
+                ARQUITECTA
+            </h1>
+            <h1 class="text-[11vw] md:text-[12vw] font-black leading-[0.8] tracking-tighter text-transparent" style="-webkit-text-stroke: 2px #000;">
+                +CREATOR.
+            </h1>
+        </div>
+        
+        <div class="mt-8 flex flex-col md:flex-row justify-between items-end gap-4 w-full">
+            <p class="font-mono-raw text-sm max-w-md font-bold" 
+               data-es="DISEÑANDO NARRATIVAS, ESPACIOS Y EXPERIENCIAS. MI PROPIA DEMOLICION CONTROLADA." 
+               data-en="DESIGNING NARRATIVES, SPACES AND EXPERIENCES. MY OWN CONTROLLED DEMOLITION.">
+                DISEÑANDO NARRATIVAS, ESPACIOS Y EXPERIENCIAS. MI PROPIA DEMOLICION CONTROLADA.
+            </p>
+            <div class="w-full md:w-auto b-raw p-2 bg-[var(--accent)] text-black font-black text-center animate-pulse"
+                 data-es="STATUS: ACEPTANDO PROYECTOS"
+                 data-en="STATUS: ACCEPTING PROJECTS">
+                STATUS: ACEPTANDO PROYECTOS
+            </div>
+        </div>
+    </header>
+
+    <!-- CINTA RODANTE -->
+    <div class="marquee b-b-raw">
+        <div class="marquee-content lang-es">
+            HABITAR EL CAMBIO + WORK IN PROGRESS + ARQUITECTURA EFÍMERA + STORYTELLING + HABITAR EL CAMBIO + WORK IN PROGRESS + ARQUITECTURA EFÍMERA + STORYTELLING +&nbsp;
+        </div>
+        <div class="marquee-content lang-es">
+            HABITAR EL CAMBIO + WORK IN PROGRESS + ARQUITECTURA EFÍMERA + STORYTELLING + HABITAR EL CAMBIO + WORK IN PROGRESS + ARQUITECTURA EFÍMERA + STORYTELLING +&nbsp;
+        </div>
+        <div class="marquee-content lang-en">
+            INHABITING CHANGE + WORK IN PROGRESS + EPHEMERAL ARCHITECTURE + STORYTELLING + INHABITING CHANGE + WORK IN PROGRESS + EPHEMERAL ARCHITECTURE + STORYTELLING +&nbsp;
+        </div>
+        <div class="marquee-content lang-en">
+            INHABITING CHANGE + WORK IN PROGRESS + EPHEMERAL ARCHITECTURE + STORYTELLING + INHABITING CHANGE + WORK IN PROGRESS + EPHEMERAL ARCHITECTURE + STORYTELLING +&nbsp;
+        </div>
+    </div>
+
+    <!-- LISTA DE PROYECTOS (ESTILO TABLA INDUSTRIAL) -->
+    <main id="work" class="w-full">
+        <div class="p-4 b-b-raw bg-black text-white font-mono-raw text-xs flex justify-between">
+            <span>[INDEX]</span>
+            <span data-es="PROYECTOS SELECCIONADOS" data-en="SELECTED PROJECTS">PROYECTOS SELECCIONADOS</span>
+        </div>
+
+        <!-- PROYECTO 1: CARMEN LILLO -->
+        <a href="proyecto-carmen.html" class="project-row block b-b-raw p-4 md:p-8 flex flex-col md:flex-row items-center gap-8 cursor-crosshair">
+            <div class="w-full md:w-1/3 aspect-video b-raw overflow-hidden bg-gray-300">
+                <video autoplay loop muted playsinline class="w-full h-full object-cover raw-media">
+                    <source src="./media/PROYECTOS/carmenlillo/carmen-video-charm.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="w-full md:w-2/3 flex flex-col justify-between h-full py-2">
+                <div class="flex justify-between items-start">
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter">CARMEN LILLO</h2>
+                    <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
+                </div>
+                <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
+                     data-es="[01] BRANDING / IDENTIDAD"
+                     data-en="[01] BRANDING / IDENTITY">
+                    [01] BRANDING / IDENTIDAD
+                </div>
+            </div>
+        </a>
+
+        <!-- PROYECTO 2: ODDLIQUOR -->
+        <a href="proyecto-oddliquor.html" class="project-row block b-b-raw p-4 md:p-8 flex flex-col md:flex-row items-center gap-8 cursor-crosshair">
+            <div class="w-full md:w-1/3 aspect-video b-raw overflow-hidden bg-gray-300">
+                <img src="./media/PROYECTOS/Oddliquor/image-1.png" class="w-full h-full object-cover raw-media" alt="Oddliquor Preview">
+            </div>
+            <div class="w-full md:w-2/3 flex flex-col justify-between h-full py-2">
+                <div class="flex justify-between items-start">
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter">ODDLIQUOR</h2>
+                    <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
+                </div>
+                <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
+                     data-es="[02] DISEÑO ESCÉNICO / ART DIRECTION"
+                     data-en="[02] STAGE DESIGN / ART DIRECTION">
+                    [02] DISEÑO ESCÉNICO / ART DIRECTION
+                </div>
+            </div>
+        </a>
+
+        <!-- PROYECTO 3: MAPA REMIX -->
+        <a href="proyecto-mapa.html" class="project-row block b-b-raw p-4 md:p-8 flex flex-col md:flex-row items-center gap-8 cursor-crosshair">
+            <div class="w-full md:w-1/3 aspect-video b-raw overflow-hidden bg-gray-300">
+                <img src="./media/PROYECTOS/Mapa remix/moodboard.png" class="w-full h-full object-cover raw-media" alt="Mapa">
+            </div>
+            <div class="w-full md:w-2/3 flex flex-col justify-between h-full py-2">
+                <div class="flex justify-between items-start">
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter">MAPA REMIX</h2>
+                    <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
+                </div>
+                <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
+                     data-es="[03] ESPACIOS CREATIVOS / REFORMA"
+                     data-en="[03] CREATIVE SPACES / REFORM">
+                    [03] ESPACIOS CREATIVOS / REFORMA
+                </div>
+            </div>
+        </a>
+
+        <!-- PROYECTO 4: MAPA RIVERLAND -->
+        <a href="proyecto-mapariverland.html" class="project-row block b-b-raw p-4 md:p-8 flex flex-col md:flex-row items-center gap-8 cursor-crosshair">
+            <div class="w-full md:w-1/3 aspect-video b-raw overflow-hidden bg-gray-300">
+                <img src="./media/PROYECTOS/Mapa estudios Riverland/Portada.png" class="w-full h-full object-cover raw-media" alt="Mapa Riverland">
+            </div>
+            <div class="w-full md:w-2/3 flex flex-col justify-between h-full py-2">
+                <div class="flex justify-between items-start">
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter">MAPA RIVERLAND</h2>
+                    <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
+                </div>
+                <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
+                     data-es="[04] ARQUITECTURA EFÍMERA"
+                     data-en="[04] EPHEMERAL ARCHITECTURE">
+                    [04] ARQUITECTURA EFÍMERA
+                </div>
+            </div>
+        </a>
+
+        <!-- PROYECTO 5: LADY VIPER -->
+        <a href="proyecto-ladyviper.html" class="project-row block b-b-raw p-4 md:p-8 flex flex-col md:flex-row items-center gap-8 cursor-crosshair">
+            <div class="w-full md:w-1/3 aspect-video b-raw overflow-hidden bg-gray-300">
+                <img src="./media/PROYECTOS/Lady Viper/portadaviper.png" class="w-full h-full object-cover raw-media" alt="Lady Viper">
+            </div>
+            <div class="w-full md:w-2/3 flex flex-col justify-between h-full py-2">
+                <div class="flex justify-between items-start">
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter">LADY VIPER</h2>
+                    <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
+                </div>
+                <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
+                     data-es="[05] BRAND & NARRATIVE DESIGN"
+                     data-en="[05] BRAND & NARRATIVE DESIGN">
+                    [05] BRAND & NARRATIVE DESIGN
+                </div>
+            </div>
+        </a>
+
+        <!-- PROYECTO 6: METAL MAD FEST -->
+        <a href="proyecto-metalmad.html" class="project-row block b-b-raw p-4 md:p-8 flex flex-col md:flex-row items-center gap-8 cursor-crosshair">
+            <div class="w-full md:w-1/3 aspect-video b-raw overflow-hidden bg-gray-300">
+                <video autoplay loop muted playsinline class="w-full h-full object-cover raw-media">
+                    <source src="./media/PROYECTOS/Metalmad Fest/video6.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="w-full md:w-2/3 flex flex-col justify-between h-full py-2">
+                <div class="flex justify-between items-start">
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter">METAL MAD FEST</h2>
+                    <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
+                </div>
+                <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
+                     data-es="[06] CREACIÓN DE CONTENIDO / PROMO"
+                     data-en="[06] CONTENT CREATION / PROMO">
+                    [06] CREACIÓN DE CONTENIDO / PROMO
+                </div>
+            </div>
+        </a>
+
+        <!-- PROYECTO 7: OATLY -->
+        <a href="proyecto-oatly.html" class="project-row block b-b-raw p-4 md:p-8 flex flex-col md:flex-row items-center gap-8 cursor-crosshair">
+            <div class="w-full md:w-1/3 aspect-video b-raw overflow-hidden bg-gray-300">
+                <img src="./media/PROYECTOS/OATLY/1.png" class="w-full h-full object-cover raw-media" alt="Oatly">
+            </div>
+            <div class="w-full md:w-2/3 flex flex-col justify-between h-full py-2">
+                <div class="flex justify-between items-start">
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter">OATLY</h2>
+                    <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
+                </div>
+                <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
+                     data-es="[07] STRATEGY & COPYWRITING"
+                     data-en="[07] STRATEGY & COPYWRITING">
+                    [07] STRATEGY & COPYWRITING
+                </div>
+            </div>
+        </a>
+
+        <!-- PROYECTO 8: VIAJANDO SIN GUION -->
+        <a href="proyecto-vsg.html" class="project-row block b-b-raw p-4 md:p-8 flex flex-col md:flex-row items-center gap-8 cursor-crosshair">
+            <div class="w-full md:w-1/3 aspect-video b-raw overflow-hidden bg-gray-300">
+                <img src="./media/PROYECTOS/Viajando sin guion/_1270521.jpg" class="w-full h-full object-cover raw-media" alt="Viajando sin guion">
+            </div>
+            <div class="w-full md:w-2/3 flex flex-col justify-between h-full py-2">
+                <div class="flex justify-between items-start">
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter">VIAJANDO S.G.</h2>
+                    <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
+                </div>
+                <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
+                     data-es="[08] VLOGGING / NARRATIVE"
+                     data-en="[08] VLOGGING / NARRATIVE">
+                    [08] VLOGGING / NARRATIVE
+                </div>
+            </div>
+        </a>
+
+    </main>
+
+    <!-- SECCIÓN ABOUT DEDICADA -->
+    <section id="about" class="w-full b-b-raw grid grid-cols-1 lg:grid-cols-3 bg-[#E5E5E5]">
+        
+        <!-- Tarjeta Izquierda: Alert Banner Intermitente con Autocrítica/Humor -->
+        <div class="p-6 b-b-raw lg:b-b-0 lg:b-r-raw bg-black text-[#FF0000] flex flex-col justify-between min-h-[300px]">
+            <div>
+                <span class="font-mono-raw text-xs opacity-60 block mb-4">// SYSTEM_ERROR // ALERT</span>
+                <div class="text-3xl font-black tracking-tighter animate-pulse leading-none mb-4">
+                    "SISI, YA ENTENDIMOS, SOS ARQUITECTA"
+                </div>
+            </div>
+            <div class="font-mono-raw text-xs text-white opacity-80"
+                 data-es="[ Sarcasmo offline. Un recordatorio constante de que habitar las ideas importa más que presumir el título. ]"
+                 data-en="[ Offline sarcasm. A constant reminder that inhabiting ideas matters more than showing off the degree. ]">
+                [ Sarcasmo offline. Un recordatorio constante de que habitar las ideas importa más que presumir el título. ]
+            </div>
+        </div>
+
+        <!-- Tarjeta Centro: Bio e Ideas -->
+        <div class="p-6 b-b-raw lg:b-b-0 lg:b-r-raw bg-white flex flex-col justify-between">
+            <div>
+                <span class="font-mono-raw text-xs text-gray-500 block mb-4">[ LP_PHILOSOPHY ]</span>
+                <p class="font-mono-raw text-sm normal-case leading-relaxed text-justify"
+                   data-es="Yo no estudié publicidad pero si te pones a pensar, realmente Le Corbusier no estudió arquitectura... Empecé mi carrera entre planos y estructuras, pero en el camino entendí que lo que más me gusta no es ver el edificio terminado, sino el proceso de habitar el espacio que hay entre las ideas."
+                   data-en="I didn't study advertising, but if you think about it, Le Corbusier didn't really study architecture either... I started my career between plans and structures, but along the way, I realized what fascinates me is not to see the finished building, but the process of inhabiting the space between ideas.">
+                    Yo no estudié publicidad pero si te pones a pensar, realmente Le Corbusier no estudió arquitectura... Empecé mi carrera entre planos y estructuras, pero en el camino entendí que lo que más me gusta no es ver el edificio terminado, sino el proceso de habitar el espacio que hay entre las ideas.
+                </p>
+            </div>
+            <div class="mt-8 font-mono-raw text-xs font-bold text-[var(--accent)]">// NO BOUNDARIES // NO RULES</div>
+        </div>
+
+        <!-- Tarjeta Derecha: Estructuras Técnicas & Habilidades -->
+        <div class="p-6 flex flex-col justify-between">
+            <div>
+                <span class="font-mono-raw text-xs text-gray-500 block mb-4">[ DISCIPLINE_SYS ]</span>
+                <div class="flex flex-col gap-3 font-mono-raw text-xs">
+                    <!-- Modificado: Orden pedido -->
+                    <div class="flex justify-between items-center border-b border-black pb-1">
+                        <span data-es="DIRECCIÓN CREATIVA" data-en="CREATIVE DIRECTION">DIRECCIÓN CREATIVA</span>
+                        <span class="font-bold">95%</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-black pb-1">
+                        <span data-es="ESTRATEGIA & CONTENIDO" data-en="STRATEGY & CONTENT">ESTRATEGIA & CONTENIDO</span>
+                        <span class="font-bold">96%</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-black pb-1">
+                        <span data-es="DISEÑO DIGITAL" data-en="DIGITAL DESIGN">DISEÑO DIGITAL</span>
+                        <span class="font-bold">92%</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-black pb-1">
+                        <span data-es="ARQUITECTURA EFÍMERA" data-en="EPHEMERAL ARCHITECTURE">ARQUITECTURA EFÍMERA</span>
+                        <span class="font-bold">98%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="font-mono-raw text-xs text-gray-400 mt-6"
+                 data-es="[ SISTEMA TOTALMENTE OPERATIVO EN MADRID, ESPAÑA. ]"
+                 data-en="[ SYSTEM FULLY OPERATIONAL IN MADRID, SPAIN. ]">
+                [ SISTEMA TOTALMENTE OPERATIVO EN MADRID, ESPAÑA. ]
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER CRUDO -->
+    <footer class="p-4 md:p-8 flex flex-col md:flex-row justify-between items-start gap-12 bg-black text-white relative">
+        <div class="max-w-lg">
+            <h3 class="text-3xl font-black mb-4 tracking-tighter text-[var(--accent)]">INFO_DUMP</h3>
+            <!-- Modificado: Nuevo stack personal con soporte bilingüe -->
+            <p class="font-mono-raw text-xs leading-relaxed opacity-80"
+               data-es="Mi stack personal es híbrido:<br><br><strong>Arquitectura:</strong> Me dio los conocimientos técnicos, el criterio estético, la gestión de presupuestos y la capacidad de no entrar en pánico ante una entrega.<br><br><strong>Creadora:</strong> Desde siempre fui la amiga plasta que quiere que hagamos un video para los 15 años de alguna del grupo, la que planificaba los actos y quería coreaografiar los bailes. Si tenia que hacer un proyecto para Musica o Arte, lo daba TODO.<br><br><strong>Culo Inquieto:</strong> Siempre queriendo aprender cosas nuevas. Invertir en mi formación en CANELA fue el giro que mi vida necesitaba para entender que el diseño, como la vida, es un Work In Progress constante."
+               data-en="My personal stack is hybrid:<br><br><strong>Architecture:</strong> It gave me technical knowledge, aesthetic criteria, budget management, and the ability not to panic before a deadline.<br><br><strong>Creator:</strong> I was always the annoying friend who wants to make a video for the 15th birthday of someone in the group, the one who planned the events and wanted to choreograph the dances. If I had to do a project for Music or Art, I gave it my ALL.<br><br><strong>Restless Mind:</strong> Always wanting to learn new things. Investing in my education at CANELA was the turn my life needed to understand that design, like life, is a constant Work In Progress.">
+                Mi stack personal es híbrido:<br><br><strong>Arquitectura:</strong> Me dio los conocimientos técnicos, el criterio estético, la gestión de presupuestos y la capacidad de no entrar en pánico ante una entrega.<br><br><strong>Creadora:</strong> Desde siempre fui la amiga plasta que quiere que hagamos un video para los 15 años de alguna del grupo, la que planificaba los actos y quería coreaografiar los bailes. Si tenia que hacer un proyecto para Musica o Arte, lo daba TODO.<br><br><strong>Culo Inquieto:</strong> Siempre queriendo aprender cosas nuevas. Invertir en mi formación en CANELA fue el giro que mi vida necesitaba para entender que el diseño, como la vida, es un Work In Progress constante.
+            </p>
+        </div>
+
+        <div class="flex flex-col gap-4 font-mono-raw font-bold text-sm w-full md:w-auto">
+            <div class="b-b-raw border-gray-600 pb-2 mb-2 text-gray-500">SYSTEM.LINKS</div>
+            <a href="mailto:luciaisabelpagan@gmail.com" class="hover:text-[var(--accent)] hover:translate-x-2 transition-transform">-> EMAIL</a>
+            <a href="https://instagram.com/luciaisabelpagan" target="_blank" class="hover:text-[var(--accent)] hover:translate-x-2 transition-transform">-> INSTAGRAM</a>
+            <a href="https://youtube.com/@viajandosinguion" target="_blank" class="hover:text-[var(--accent)] hover:translate-x-2 transition-transform">-> YOUTUBE</a>
+        </div>
+    </footer>
+
+    <!-- EASTER EGG (BOTÓN AL OS_98) -->
+    <a href="https://luciaisabelpagan.github.io/portfolio/" class="block w-full bg-[var(--accent)] text-black text-center py-6 font-black text-xl md:text-3xl tracking-tighter hover:bg-white transition-colors cursor-crosshair border-t-[3px] border-black">
+        [ ACCEDER AL ARCHIVO // LUCIA_OS_98.EXE ]
+    </a>
+
+    <!-- MOTOR DE TRADUCCIÓN NATIVO -->
+    <script>
+        function toggleLanguage() {
+            const currentLang = document.documentElement.lang === 'es' ? 'en' : 'es';
+            document.documentElement.lang = currentLang;
+            
+            // Actualizar todos los textos con traducción inline usando innerHTML para soportar etiquetas <br> y <strong>
+            document.querySelectorAll('[data-es]').forEach(el => {
+                el.innerHTML = el.getAttribute(`data-${currentLang}`);
+            });
+
+            // Actualizar el estado del botón
+            const btn = document.getElementById('lang-toggle');
+            btn.textContent = currentLang === 'es' ? '[ LANG: ES ]' : '[ LANG: EN ]';
+        }
+    </script>
+
+</body>
+</html>
