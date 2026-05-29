@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUCÍA PAGÁN // CARMEN LILLO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #E5E5E5; 
+            --accent: #FF0000; 
+        }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--bg-color);
+            color: #000;
+            cursor: crosshair; 
+            text-transform: uppercase;
+        }
+
+        .font-mono-raw { font-family: 'Space Mono', monospace; }
+
+        .b-raw { border: 3px solid #000; }
+        .b-b-raw { border-bottom: 3px solid #000; }
+        .b-r-raw { border-right: 3px solid #000; }
+        .b-l-raw { border-left: 3px solid #000; }
+
+        .btn-raw { transition: all 0.2s; }
+        .btn-raw:hover { background-color: #000; color: var(--bg-color); }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="antialiased selection:bg-black selection:text-white">
+
+    <nav class="w-full flex justify-between items-center p-4 b-b-raw bg-[#E5E5E5] sticky top-0 z-50 h-16">
+        <a href="index.html" class="font-black text-xl hover:text-[var(--accent)] transition-colors"
+           data-es="<- VOLVER AL INDEX" data-en="<- BACK TO INDEX">
+            <- VOLVER AL INDEX
+        </a>
+        
+        <div class="flex items-center gap-2">
+            <button id="lang-toggle" onclick="toggleLanguage()" class="font-mono-raw text-xs bg-black text-[var(--accent)] px-3 py-1 font-bold b-raw hover:bg-[var(--accent)] hover:text-black transition-colors">
+                [ LANG: ES ]
+            </button>
+            <div class="font-mono-raw text-xs bg-black text-[var(--accent)] px-3 py-1 font-bold animate-pulse">
+                FILE_01_OPEN
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex flex-col lg:flex-row w-full min-h-[calc(100vh-4rem)]">
+        
+        <section class="w-full lg:w-1/3 b-b-raw lg:b-b-0 lg:b-r-raw bg-[#E5E5E5] flex flex-col lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] overflow-y-auto no-scrollbar">
+            
+            <header class="p-6 b-b-raw bg-white">
+                <div class="font-mono-raw text-sm text-gray-500 mb-2"
+                     data-es="[01] DISEÑO GRAFICO / IDENTIDAD VISUAL"
+                     data-en="[01] GRAPHIC DESIGN / VISUAL IDENTITY">
+                    [01] DISEÑO GRAFICO / IDENTIDAD VISUAL
+                </div>
+                <h1 class="text-6xl font-black tracking-tighter leading-none mb-4 break-words">
+                    CARMEN LILLO
+                </h1>
+            </header>
+
+            <div class="p-6 b-b-raw font-mono-raw text-xs">
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <span class="text-gray-500 block" data-es="CLIENTE" data-en="CLIENT">CLIENTE</span>
+                        <span class="font-bold">CARMEN LILLO</span>
+                    </div>
+                    <div>
+                        <span class="text-gray-500 block" data-es="AÑO" data-en="YEAR">AÑO</span>
+                        <span class="font-bold">2025</span>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <span class="text-gray-500 block">ROL</span>
+                    <span class="font-bold"
+                          data-es="DISEÑO GRÁFICO / BRANDING / DIRECCIÓN DE ARTE"
+                          data-en="GRAPHIC DESIGN / BRANDING / ART DIRECTION">
+                        DIRECCIÓN DE ARTE / VISUALES PARA DIRECTO / STAGE DESIGN
+                    </span>
+                </div>
+                <div class="flex flex-wrap gap-1 mt-2">
+                    <span class="text-gray-500 block w-full" data-es="HERRAMIENTAS" data-en="TOOLS">HERRAMIENTAS</span>
+                    <span class="font-bold bg-black text-white px-2 py-1">ILLUSTRATOR</span> 
+                    <span class="font-bold bg-black text-white px-2 py-1">PHOTOSHOP</span>
+                    <span class="font-bold bg-black text-[var(--accent)] px-2 py-1 border border-[var(--accent)]">MIDJOURNEY</span>
+                    <span class="font-bold bg-black text-[var(--accent)] px-2 py-1 border border-[var(--accent)]">ADOBE FIREFLY</span>
+                </div>
+            </div>
+
+            <div class="p-6 flex-1 bg-[#E5E5E5]">
+                <h3 class="text-xl font-black mb-4" data-es="EL CONCEPTO." data-en="THE CONCEPT.">EL CONCEPTO.</h3>
+                <p class="font-mono-raw text-sm normal-case text-justify opacity-90 leading-relaxed text-slate-900"
+                   data-es="Este proyecto de identidad de marca para Carmen Lillo nace de un sistema de contrastes que busca encapsular la dualidad de su propuesta artística. El ecosistema visual coexiste entre dos universos opuestos: por un lado, la potencia rítmica e industrial de la música electrónica, representada a través de tipografías sans-serif de líneas puras, formatos modulares fragmentados y logotipos acabados en cromo líquido con texturas metálicas.<br><br>Por el otro, la sutileza, fluidez e intimidad de su propuesta vocal neosoul, plasmada mediante trazos tipográficos handwritten orgánicos y gestuales.<br><br>Apoyada en una atmósfera cromática nocturna y sofisticada inspirada en la noche de Madrid. Que viaja desde la introspección del negro profundo hasta la energía del azul eléctrico. La marca se consolida como una identidad mutante, contemporánea y con un fuerte arraigo en la cultura urbana digital."
+                   data-en="This brand identity project for Carmen Lillo stems from a system of contrasts that seeks to encapsulate the duality of her artistic vision. The visual ecosystem coexists between two opposing universes: on one hand, the rhythmic and industrial power of electronic music, represented through clean-lined sans-serif typography, fragmented modular formats, and liquid chrome logos with metallic textures.<br><br>On the other hand, the subtlety, fluidity, and intimacy of her neosoul vocal style, captured through organic and gestural handwritten typographical strokes.<br><br>Supported by a sophisticated nocturnal color palette inspired by Madrid's nightlife, moving from deep introspective black to intense electric blue. The brand solidifies into a changing, contemporary identity deeply rooted in digital urban culture.">
+                    Este proyecto de identidad de marca para Carmen Lillo nace de un sistema de contrastes que busca encapsular la dualidad de su propuesta artística. El ecosistema visual coexiste entre dos universos opuestos: por un lado, la potencia rítmica e industrial de la música electrónica, representada a través de tipografías sans-serif de líneas puras, formatos modulares fragmentados y logotipos acabados en cromo líquido con texturas metálicas.
+                </p>
+            </div>
+        </section>
+
+        <section class="w-full lg:w-2/3 bg-black p-4 md:p-8 flex flex-col gap-8">
+            <div class="text-[#00ff00] font-mono-raw text-xs opacity-50 mb-4">
+                DISPLAY_MODE: GALLERY_VIEWER // SYSTEM.READY
+            </div>
+            
+            <div class="w-full b-raw bg-black">
+                <video controls autoplay loop muted playsinline class="w-full h-auto object-cover">
+                    <source src="./media/PROYECTOS/carmenlillo/carmen-video-charm.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="w-full b-raw bg-[#E5E5E5]">
+                <img src="./media/PROYECTOS/carmenlillo/carmen-branding.png" alt="Carmen Branding" class="w-full h-auto object-cover">
+            </div>
+
+            <div class="w-full b-raw bg-[#E5E5E5]">
+                <img src="./media/PROYECTOS/carmenlillo/carmen-fotocopia.png" alt="Carmen Fotocopia" class="w-full h-auto object-cover">
+            </div>
+
+            <div class="w-full b-raw bg-black p-8 flex justify-center items-center">
+                <img src="./media/PROYECTOS/carmenlillo/cromo-3d-logo.png" alt="Cromo 3D Logo" class="w-full h-auto object-contain max-h-96">
+            </div>
+
+            <div class="w-full b-raw bg-black p-8 flex justify-center items-center">
+                <img src="./media/PROYECTOS/carmenlillo/isotipo.png" alt="Isotipo" class="w-full h-auto object-contain max-h-96">
+            </div>
+
+            <div class="w-full b-raw bg-[#E5E5E5]">
+                <img src="./media/PROYECTOS/carmenlillo/pulsera-charms.png" alt="Pulsera Charms" class="w-full h-auto object-cover">
+            </div>
+
+            <div class="w-full b-raw bg-[#E5E5E5]">
+                <img src="./media/PROYECTOS/carmenlillo/pulsera-charms2.png" alt="Pulsera Charms 2" class="w-full h-auto object-cover">
+            </div>
+
+            <div class="w-full b-raw bg-[#E5E5E5]">
+                <img src="./media/PROYECTOS/carmenlillo/charm-nga.jpeg" alt="Charm Nga" class="w-full h-auto object-cover">
+            </div>
+
+            <div class="w-full b-raw bg-[#E5E5E5]">
+                <img src="./media/PROYECTOS/carmenlillo/charm-estrella.jpeg" alt="Charm Estrella" class="w-full h-auto object-cover">
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedLang = localStorage.getItem('portfolio-lang') || 'es';
+            setLanguage(savedLang);
+        });
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-es]').forEach(el => {
+                el.innerHTML = el.getAttribute(`data-${lang}`);
+            });
+            const btn = document.getElementById('lang-toggle');
+            if (btn) {
+                btn.textContent = lang === 'es' ? '[ LANG: ES ]' : '[ LANG: EN ]';
+            }
+        }
+
+        function toggleLanguage() {
+            const currentLang = document.documentElement.lang === 'es' ? 'en' : 'es';
+            localStorage.setItem('portfolio-lang', currentLang);
+            setLanguage(currentLang);
+        }
+    </script>
+</body>
+</html>
