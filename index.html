@@ -9,14 +9,13 @@
     <style>
         :root {
             --bg-color: #E5E5E5; /* Gris crudo */
-            --accent: #FF0000; /* Rojo tóxico/alerta */
+            --accent: #FDB813; /* Amarillo Mostaza / Industrial */
         }
         
         body {
             font-family: 'Space Grotesk', sans-serif;
             background-color: var(--bg-color);
             color: #000;
-            /* Cursor estilo francotirador para más agresividad */
             cursor: crosshair; 
             text-transform: uppercase;
         }
@@ -63,7 +62,7 @@
         }
         .project-row:hover .pill {
             background-color: var(--accent);
-            color: #fff;
+            color: #000; /* Texto en negro para que contraste con el amarillo */
             border-color: var(--accent);
         }
 
@@ -114,13 +113,13 @@
             <img src="./media/portada.jpeg" alt="Lucía Isabel Pagán Portada" class="w-full h-full object-cover block">
             
             <div class="absolute bottom-0 left-0 p-3 sm:p-6 md:p-8 flex flex-col justify-end select-none">
-                <h1 class="text-[14vw] md:text-[10vw] font-black leading-[0.85] tracking-wide text-white" 
+                <h1 class="text-[12vw] md:text-[8vw] font-black leading-[0.85] tracking-wide text-white" 
                     style="-webkit-text-stroke: 3px #000;"
                     data-es="ARQUITECTA" data-en="ARCHITECT">
                     ARQUITECTA
                 </h1>
-                <h1 class="text-[14vw] md:text-[10vw] font-black leading-[0.85] tracking-wide text-transparent" style="-webkit-text-stroke: 4px var(--accent);">
-                    +CREATOR.
+                <h1 class="text-[12vw] md:text-[8vw] font-black leading-[0.85] tracking-wide text-transparent" style="-webkit-text-stroke: 4px var(--accent);">
+                    +SOCIAL CREATIVE.
                 </h1>
             </div>
         </div>
@@ -131,7 +130,7 @@
                data-en="DESIGNING NARRATIVES, SPACES AND EXPERIENCES. MY OWN CONTROLLED DEMOLITION.">
                 DISEÑANDO NARRATIVAS, ESPACIOS Y EXPERIENCIAS. MI PROPIA DEMOLICION CONTROLADA.
             </p>
-            <div class="w-full md:w-auto b-raw p-2 bg-[var(--accent)] text-black font-black text-center animate-pulse"
+            <div class="w-full md:w-auto b-raw p-2 bg-[var(--accent)] text-black font-black text-center"
                  data-es="STATUS: ACEPTANDO PROYECTOS"
                  data-en="STATUS: ACCEPTING PROJECTS">
                 STATUS: ACEPTANDO PROYECTOS
@@ -196,40 +195,6 @@
             </div>
         </a>
 
-        <a href="proyecto-mapa.html" class="project-row block b-b-raw p-4 md:p-8 flex flex-col md:flex-row items-center gap-8 cursor-crosshair">
-            <div class="w-full md:w-1/3 aspect-video b-raw overflow-hidden bg-gray-300">
-                <img src="./media/PROYECTOS/Mapa remix/moodboard.png" class="w-full h-full object-cover raw-media" alt="Mapa">
-            </div>
-            <div class="w-full md:w-2/3 flex flex-col justify-between h-full py-2">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter">MAPA REMIX</h2>
-                    <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
-                </div>
-                <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
-                     data-es="[03] ESPACIOS CREATIVOS / REFORMA"
-                     data-en="[03] CREATIVE SPACES / REFORM">
-                    [03] ESPACIOS CREATIVOS / REFORMA
-                </div>
-            </div>
-        </a>
-
-        <a href="proyecto-mapariverland.html" class="project-row block b-b-raw p-4 md:p-8 flex flex-col md:flex-row items-center gap-8 cursor-crosshair">
-            <div class="w-full md:w-1/3 aspect-video b-raw overflow-hidden bg-gray-300">
-                <img src="./media/PROYECTOS/Mapa estudios Riverland/Portada.png" class="w-full h-full object-cover raw-media" alt="Mapa Riverland">
-            </div>
-            <div class="w-full md:w-2/3 flex flex-col justify-between h-full py-2">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter">MAPA RIVERLAND</h2>
-                    <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
-                </div>
-                <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
-                     data-es="[04] ARQUITECTURA EFÍMERA"
-                     data-en="[04] EPHEMERAL ARCHITECTURE">
-                    [04] ARQUITECTURA EFÍMERA
-                </div>
-            </div>
-        </a>
-
         <a href="proyecto-ladyviper.html" class="project-row block b-b-raw p-4 md:p-8 flex flex-col md:flex-row items-center gap-8 cursor-crosshair">
             <div class="w-full md:w-1/3 aspect-video b-raw overflow-hidden bg-gray-300">
                 <img src="./media/PROYECTOS/Lady Viper/portadaviper.png" class="w-full h-full object-cover raw-media" alt="Lady Viper">
@@ -240,9 +205,9 @@
                     <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
                 </div>
                 <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
-                     data-es="[05] BRAND & NARRATIVE DESIGN"
-                     data-en="[05] BRAND & NARRATIVE DESIGN">
-                    [05] BRAND & NARRATIVE DESIGN
+                     data-es="[03] BRAND & NARRATIVE DESIGN"
+                     data-en="[03] BRAND & NARRATIVE DESIGN">
+                    [03] BRAND & NARRATIVE DESIGN
                 </div>
             </div>
         </a>
@@ -250,7 +215,7 @@
         <a href="proyecto-metalmad.html" class="project-row block b-b-raw p-4 md:p-8 flex flex-col md:flex-row items-center gap-8 cursor-crosshair">
             <div class="w-full md:w-1/3 aspect-video b-raw overflow-hidden bg-gray-300">
                 <video autoplay loop muted playsinline class="w-full h-full object-cover raw-media">
-                    <source src="./media/PROYECTOS/Metalmad%20Fest/video6.mp4" type="video/mp4">
+                    <source src="./media/PROYECTOS/Metalmad%20Fest/video1.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="w-full md:w-2/3 flex flex-col justify-between h-full py-2">
@@ -259,9 +224,9 @@
                     <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
                 </div>
                 <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
-                     data-es="[06] CREACIÓN DE CONTENIDO / PROMO"
-                     data-en="[06] CONTENT CREATION / PROMO">
-                    [06] CREACIÓN DE CONTENIDO / PROMO
+                     data-es="[04] CREACIÓN DE CONTENIDO / PROMO"
+                     data-en="[04] CONTENT CREATION / PROMO">
+                    [04] CREACIÓN DE CONTENIDO / PROMO
                 </div>
             </div>
         </a>
@@ -276,9 +241,9 @@
                     <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
                 </div>
                 <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
-                     data-es="[07] STRATEGY & COPYWRITING"
-                     data-en="[07] STRATEGY & COPYWRITING">
-                    [07] STRATEGY & COPYWRITING
+                     data-es="[05] STRATEGY & COPYWRITING"
+                     data-en="[05] STRATEGY & COPYWRITING">
+                    [05] STRATEGY & COPYWRITING
                 </div>
             </div>
         </a>
@@ -293,9 +258,43 @@
                     <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
                 </div>
                 <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
-                     data-es="[08] VLOGGING / NARRATIVE"
-                     data-en="[08] VLOGGING / NARRATIVE">
-                    [08] VLOGGING / NARRATIVE
+                     data-es="[06] VLOGGING / NARRATIVE"
+                     data-en="[06] VLOGGING / NARRATIVE">
+                    [06] VLOGGING / NARRATIVE
+                </div>
+            </div>
+        </a>
+
+        <a href="proyecto-mapa.html" class="project-row block b-b-raw p-4 md:p-8 flex flex-col md:flex-row items-center gap-8 cursor-crosshair">
+            <div class="w-full md:w-1/3 aspect-video b-raw overflow-hidden bg-gray-300">
+                <img src="./media/PROYECTOS/Mapa remix/moodboard.png" class="w-full h-full object-cover raw-media" alt="Mapa">
+            </div>
+            <div class="w-full md:w-2/3 flex flex-col justify-between h-full py-2">
+                <div class="flex justify-between items-start">
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter">MAPA REMIX</h2>
+                    <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
+                </div>
+                <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
+                     data-es="[07] ESPACIOS CREATIVOS / REFORMA"
+                     data-en="[07] CREATIVE SPACES / REFORM">
+                    [07] ESPACIOS CREATIVOS / REFORMA
+                </div>
+            </div>
+        </a>
+
+        <a href="proyecto-mapariverland.html" class="project-row block b-b-raw p-4 md:p-8 flex flex-col md:flex-row items-center gap-8 cursor-crosshair">
+            <div class="w-full md:w-1/3 aspect-video b-raw overflow-hidden bg-gray-300">
+                <img src="./media/PROYECTOS/Mapa estudios Riverland/Portada.png" class="w-full h-full object-cover raw-media" alt="Mapa Riverland">
+            </div>
+            <div class="w-full md:w-2/3 flex flex-col justify-between h-full py-2">
+                <div class="flex justify-between items-start">
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter">MAPA RIVERLAND</h2>
+                    <span class="pill font-mono-raw text-xs b-raw px-2 py-1 font-bold">INFO</span>
+                </div>
+                <div class="font-mono-raw text-sm mt-4 md:mt-0 opacity-80"
+                     data-es="[08] ARQUITECTURA EFÍMERA"
+                     data-en="[08] EPHEMERAL ARCHITECTURE">
+                    [08] ARQUITECTURA EFÍMERA
                 </div>
             </div>
         </a>
@@ -304,17 +303,17 @@
 
     <section id="about" class="w-full b-b-raw grid grid-cols-1 lg:grid-cols-3 bg-[#E5E5E5]">
         
-        <div class="p-6 b-b-raw lg:b-b-0 lg:b-r-raw bg-black text-[#FF0000] flex flex-col justify-between min-h-[300px]">
+        <div class="p-6 b-b-raw lg:b-b-0 lg:b-r-raw bg-black text-[#FDB813] flex flex-col justify-between min-h-[300px]">
             <div>
                 <span class="font-mono-raw text-xs opacity-60 block mb-4">// SYSTEM_ERROR // ALERT</span>
-                <div class="text-3xl font-black tracking-tighter animate-pulse leading-none mb-4">
+                <div class="text-3xl font-black tracking-tighter leading-none mb-4">
                     "SISI, YA ENTENDIMOS, SOS ARQUITECTA"
                 </div>
             </div>
             <div class="font-mono-raw text-xs text-white opacity-80"
-                 data-es="[ Sarcasmo offline.]"
+                 data-es="[ Sarcasmo offline. Un recordatorio constante de que habitar las ideas importa más que presumir el título. ]"
                  data-en="[ Offline sarcasm. A constant reminder that inhabiting ideas matters more than showing off the degree. ]">
-                [ Sarcasmo offline. ]
+                [ Sarcasmo offline. Un recordatorio constante de que habitar las ideas importa más que presumir el título. ]
             </div>
         </div>
 
@@ -331,7 +330,7 @@
             <div class="b-raw p-3 bg-[#E5E5E5] w-full flex flex-col gap-2">
                 <div class="font-mono-raw text-[10px] font-bold flex justify-between items-center text-black">
                     <span data-es="[REPRODUCIENDO: PARASITO]" data-en="[PLAYING: PARASITO]">[REPRODUCIENDO: PARASITO]</span>
-                    <span class="text-[var(--accent)] animate-pulse">LADY_VIPER.MP3</span>
+                    <span class="text-[var(--accent)]">LADY_VIPER.MP3</span>
                 </div>
                 <audio controls class="w-full font-mono-raw h-8 accent-black">
                     <source src="./media/Parasito_LadyViper.mp3" type="audio/mpeg">
@@ -375,7 +374,7 @@
                     <span class="b-raw px-2 py-1 bg-black text-white hover:bg-[var(--accent)] hover:text-black transition-colors cursor-crosshair">CAPCUT</span>
                     <span class="b-raw px-2 py-1 bg-white text-black hover:bg-black hover:text-white transition-colors cursor-crosshair">RHINO3D</span>
                     <span class="b-raw px-2 py-1 bg-white text-black hover:bg-black hover:text-white transition-colors cursor-crosshair">GRASSHOPPER</span>
-                    <span class="b-raw px-2 py-1 bg-[var(--accent)] text-black border-black animate-pulse cursor-crosshair" data-es="IA GENERATIVA" data-en="GENERATIVE AI">IA GENERATIVA</span>
+                    <span class="b-raw px-2 py-1 bg-[var(--accent)] text-black border-black cursor-crosshair" data-es="IA GENERATIVA" data-en="GENERATIVE AI">IA GENERATIVA</span>
                 </div>
             </div>
             
@@ -422,12 +421,10 @@
             const currentLang = document.documentElement.lang === 'es' ? 'en' : 'es';
             document.documentElement.lang = currentLang;
             
-            // Actualizar todos los textos con traducción inline usando innerHTML para soportar etiquetas <br> y <strong>
             document.querySelectorAll('[data-es]').forEach(el => {
                 el.innerHTML = el.getAttribute(`data-${currentLang}`);
             });
 
-            // Actualizar el estado del botón
             const btn = document.getElementById('lang-toggle');
             btn.textContent = currentLang === 'es' ? '[ LANG: ES ]' : '[ LANG: EN ]';
         }
